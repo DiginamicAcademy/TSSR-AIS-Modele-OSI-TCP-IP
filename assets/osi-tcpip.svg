@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" font-family="'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+  <title>Correspondance entre le modèle OSI et le modèle TCP/IP</title>
+  <desc>Les sept couches OSI à gauche, les quatre couches TCP/IP à droite, alignées : Application regroupe les couches OSI 7, 6 et 5 ; Transport correspond à 4 ; Internet à 3 ; Accès réseau regroupe 2 et 1. La colonne de droite donne l'unité de données de chaque niveau.</desc>
+  <defs>
+    <linearGradient id="g-app" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7b3fa0"/>
+      <stop offset="0.5" stop-color="#5b4bc4"/>
+      <stop offset="1" stop-color="#2f6fbf"/>
+    </linearGradient>
+    <linearGradient id="g-acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8621b"/>
+      <stop offset="1" stop-color="#b33a3a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- En-têtes de colonnes -->
+  <g fill="#888" font-weight="700" font-size="20" text-anchor="middle">
+    <text x="190" y="38">Modèle OSI</text>
+    <text x="560" y="38">Modèle TCP/IP</text>
+    <text x="870" y="38" font-size="18">Unité de données</text>
+  </g>
+
+  <!-- Modèle OSI : 7 couches -->
+  <g fill="#fff" font-weight="700" font-size="21" text-anchor="middle">
+    <rect x="20" y="60" width="340" height="62" rx="8" fill="#7b3fa0"/>
+    <text x="190" y="98">7 · Application</text>
+    <rect x="20" y="130" width="340" height="62" rx="8" fill="#5b4bc4"/>
+    <text x="190" y="168">6 · Présentation</text>
+    <rect x="20" y="200" width="340" height="62" rx="8" fill="#2f6fbf"/>
+    <text x="190" y="238">5 · Session</text>
+    <rect x="20" y="270" width="340" height="62" rx="8" fill="#1b7a63"/>
+    <text x="190" y="308">4 · Transport</text>
+    <rect x="20" y="340" width="340" height="62" rx="8" fill="#347a2f"/>
+    <text x="190" y="378">3 · Réseau</text>
+    <rect x="20" y="410" width="340" height="62" rx="8" fill="#b8621b"/>
+    <text x="190" y="448">2 · Liaison de données</text>
+    <rect x="20" y="480" width="340" height="62" rx="8" fill="#b33a3a"/>
+    <text x="190" y="518">1 · Physique</text>
+  </g>
+
+  <!-- Modèle TCP/IP : 4 couches, alignées sur OSI -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="390" y="60" width="340" height="202" rx="8" fill="url(#g-app)"/>
+    <text x="560" y="156" font-weight="700" font-size="22">Application</text>
+    <text x="560" y="184" font-size="18">HTTP · DNS · SSH · TLS</text>
+
+    <rect x="390" y="270" width="340" height="62" rx="8" fill="#1b7a63"/>
+    <text x="560" y="297" font-weight="700" font-size="20">Transport</text>
+    <text x="560" y="320" font-size="17">TCP · UDP</text>
+
+    <rect x="390" y="340" width="340" height="62" rx="8" fill="#347a2f"/>
+    <text x="560" y="367" font-weight="700" font-size="20">Internet</text>
+    <text x="560" y="390" font-size="17">IPv4 · IPv6 · ICMP</text>
+
+    <rect x="390" y="410" width="340" height="132" rx="8" fill="url(#g-acc)"/>
+    <text x="560" y="470" font-weight="700" font-size="22">Accès réseau</text>
+    <text x="560" y="498" font-size="18">Ethernet · Wi-Fi · ARP</text>
+  </g>
+
+  <!-- Unités de données -->
+  <g stroke="#888" stroke-width="3" stroke-linecap="round">
+    <line x1="770" y1="68" x2="770" y2="254"/>
+    <line x1="770" y1="278" x2="770" y2="324"/>
+    <line x1="770" y1="348" x2="770" y2="394"/>
+    <line x1="770" y1="418" x2="770" y2="464"/>
+    <line x1="770" y1="488" x2="770" y2="534"/>
+  </g>
+  <g fill="#888" font-weight="700" font-size="22">
+    <text x="790" y="168">Données</text>
+    <text x="790" y="298">Segment</text>
+    <text x="790" y="378">Paquet</text>
+    <text x="790" y="448">Trame</text>
+    <text x="790" y="518">Bits</text>
+  </g>
+  <text x="790" y="320" fill="#888" font-size="15">(datagramme en UDP)</text>
+</svg>

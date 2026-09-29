@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" font-family="'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+  <title>L'encapsulation, couche par couche</title>
+  <desc>Les données de l'application reçoivent successivement un en-tête TCP (segment), un en-tête IP (paquet), puis un en-tête Ethernet et une queue FCS (trame), avant d'être émises sous forme de bits.</desc>
+
+  <!-- Couches, à gauche -->
+  <g fill="#888" font-weight="700" font-size="19" text-anchor="end">
+    <text x="175" y="66">Application</text>
+    <text x="175" y="144">Transport</text>
+    <text x="175" y="222">Réseau</text>
+    <text x="175" y="300">Liaison</text>
+    <text x="175" y="378">Physique</text>
+  </g>
+
+  <!-- Unités de données, à droite -->
+  <g fill="#888" font-weight="700" font-size="19">
+    <text x="898" y="66">Données</text>
+    <text x="898" y="144">Segment</text>
+    <text x="898" y="222">Paquet</text>
+    <text x="898" y="300">Trame</text>
+    <text x="898" y="378">Bits</text>
+  </g>
+
+  <!-- Application -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="540" y="30" width="278" height="58" rx="6" fill="#7b3fa0"/>
+    <text x="679" y="56" font-weight="700" font-size="17">Données</text>
+    <text x="679" y="76" font-size="14">requête HTTP</text>
+  </g>
+
+  <!-- Transport -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="430" y="108" width="108" height="58" rx="6" fill="#1b7a63"/>
+    <text x="484" y="134" font-weight="700" font-size="17">TCP</text>
+    <text x="484" y="154" font-size="14">ports</text>
+    <rect x="540" y="108" width="278" height="58" rx="6" fill="#7b3fa0"/>
+    <text x="679" y="134" font-weight="700" font-size="17">Données</text>
+    <text x="679" y="154" font-size="14">requête HTTP</text>
+  </g>
+
+  <!-- Réseau -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="320" y="186" width="108" height="58" rx="6" fill="#347a2f"/>
+    <text x="374" y="212" font-weight="700" font-size="17">IP</text>
+    <text x="374" y="232" font-size="14">adresses IP</text>
+    <rect x="430" y="186" width="108" height="58" rx="6" fill="#1b7a63"/>
+    <text x="484" y="212" font-weight="700" font-size="17">TCP</text>
+    <text x="484" y="232" font-size="14">ports</text>
+    <rect x="540" y="186" width="278" height="58" rx="6" fill="#7b3fa0"/>
+    <text x="679" y="212" font-weight="700" font-size="17">Données</text>
+    <text x="679" y="232" font-size="14">requête HTTP</text>
+  </g>
+
+  <!-- Liaison -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="190" y="264" width="128" height="58" rx="6" fill="#b8621b"/>
+    <text x="254" y="290" font-weight="700" font-size="17">Ethernet</text>
+    <text x="254" y="310" font-size="14">adresses MAC</text>
+    <rect x="320" y="264" width="108" height="58" rx="6" fill="#347a2f"/>
+    <text x="374" y="290" font-weight="700" font-size="17">IP</text>
+    <text x="374" y="310" font-size="14">adresses IP</text>
+    <rect x="430" y="264" width="108" height="58" rx="6" fill="#1b7a63"/>
+    <text x="484" y="290" font-weight="700" font-size="17">TCP</text>
+    <text x="484" y="310" font-size="14">ports</text>
+    <rect x="540" y="264" width="278" height="58" rx="6" fill="#7b3fa0"/>
+    <text x="679" y="290" font-weight="700" font-size="17">Données</text>
+    <text x="679" y="310" font-size="14">requête HTTP</text>
+    <rect x="820" y="264" width="60" height="58" rx="6" fill="#b8621b"/>
+    <text x="850" y="290" font-weight="700" font-size="17">FCS</text>
+    <text x="850" y="310" font-size="14">CRC</text>
+  </g>
+
+  <!-- Physique -->
+  <rect x="190" y="342" width="690" height="58" rx="6" fill="#b33a3a"/>
+  <text x="535" y="377" fill="#fff" text-anchor="middle" font-size="18" font-family="Consolas, 'DejaVu Sans Mono', monospace">01000101 00000000 00000010 00111011 11010010 …</text>
+</svg>

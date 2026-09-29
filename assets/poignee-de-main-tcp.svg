@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="460" viewBox="0 0 860 460" font-family="'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+  <title>La poignée de main TCP en trois étapes</title>
+  <desc>Le client envoie SYN au serveur, le serveur répond SYN-ACK, le client confirme par ACK. La connexion est alors établie et les données circulent.</desc>
+
+  <!-- Participants -->
+  <rect x="40" y="14" width="220" height="70" rx="8" fill="#5b4bc4"/>
+  <rect x="590" y="14" width="240" height="70" rx="8" fill="#1b7a63"/>
+  <g fill="#fff" text-anchor="middle">
+    <text x="150" y="44" font-weight="700" font-size="22">Client</text>
+    <text x="150" y="70" font-size="17">192.168.10.25</text>
+    <text x="710" y="44" font-weight="700" font-size="22">Serveur</text>
+    <text x="710" y="70" font-size="17">10.0.20.15, port 443</text>
+  </g>
+
+  <!-- Lignes de vie -->
+  <g stroke="#888" stroke-width="2" stroke-dasharray="6 6">
+    <line x1="150" y1="84" x2="150" y2="452"/>
+    <line x1="710" y1="84" x2="710" y2="452"/>
+  </g>
+
+  <!-- 1. SYN : client vers serveur -->
+  <line x1="154" y1="136" x2="692" y2="136" stroke="#5b4bc4" stroke-width="4"/>
+  <polygon points="707,136 689,125 689,147" fill="#5b4bc4"/>
+  <rect x="388" y="119" width="84" height="34" rx="17" fill="#5b4bc4"/>
+  <text x="430" y="143" fill="#fff" font-weight="700" font-size="19" text-anchor="middle">SYN</text>
+  <text x="430" y="178" fill="#888" font-size="19" font-style="italic" text-anchor="middle">je veux ouvrir une connexion</text>
+
+  <!-- 2. SYN-ACK : serveur vers client -->
+  <line x1="706" y1="218" x2="168" y2="218" stroke="#1b7a63" stroke-width="4"/>
+  <polygon points="153,218 171,207 171,229" fill="#1b7a63"/>
+  <rect x="360" y="201" width="140" height="34" rx="17" fill="#1b7a63"/>
+  <text x="430" y="225" fill="#fff" font-weight="700" font-size="19" text-anchor="middle">SYN-ACK</text>
+  <text x="430" y="260" fill="#888" font-size="19" font-style="italic" text-anchor="middle">d'accord, j'ouvre aussi</text>
+
+  <!-- 3. ACK : client vers serveur -->
+  <line x1="154" y1="300" x2="692" y2="300" stroke="#5b4bc4" stroke-width="4"/>
+  <polygon points="707,300 689,289 689,311" fill="#5b4bc4"/>
+  <rect x="388" y="283" width="84" height="34" rx="17" fill="#5b4bc4"/>
+  <text x="430" y="307" fill="#fff" font-weight="700" font-size="19" text-anchor="middle">ACK</text>
+  <text x="430" y="342" fill="#888" font-size="19" font-style="italic" text-anchor="middle">bien reçu</text>
+
+  <!-- Connexion établie -->
+  <rect x="150" y="360" width="560" height="34" rx="6" fill="#888" fill-opacity="0.18"/>
+  <text x="430" y="383" fill="#888" font-weight="700" font-size="19" text-anchor="middle">connexion établie</text>
+
+  <!-- Données -->
+  <line x1="154" y1="428" x2="686" y2="428" stroke="#347a2f" stroke-width="6"/>
+  <polygon points="708,428 684,415 684,441" fill="#347a2f"/>
+  <rect x="340" y="411" width="180" height="34" rx="17" fill="#347a2f"/>
+  <text x="430" y="435" fill="#fff" font-weight="700" font-size="19" text-anchor="middle">données HTTPS</text>
+</svg>

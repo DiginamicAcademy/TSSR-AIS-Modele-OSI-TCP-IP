@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" font-family="'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+  <title>Le chemin d'une donnée à travers un switch et un routeur</title>
+  <desc>Le poste client descend ses sept couches, le switch remonte jusqu'à la couche 2 pour lire l'adresse MAC, le routeur remonte jusqu'à la couche 3 pour lire l'adresse IP, et le serveur remonte les sept couches jusqu'à l'application.</desc>
+
+  <!-- Légende des couches -->
+  <g fill="#888" font-weight="700" font-size="16" text-anchor="end">
+    <text x="200" y="86">7 · Application</text>
+    <text x="200" y="132">6 · Présentation</text>
+    <text x="200" y="178">5 · Session</text>
+    <text x="200" y="224">4 · Transport</text>
+    <text x="200" y="270">3 · Réseau</text>
+    <text x="200" y="316">2 · Liaison</text>
+    <text x="200" y="362">1 · Physique</text>
+  </g>
+
+  <!-- Nom des équipements -->
+  <g fill="#888" font-weight="700" font-size="18" text-anchor="middle">
+    <text x="280" y="42">Poste client</text>
+    <text x="495" y="42">Switch</text>
+    <text x="710" y="42">Routeur</text>
+    <text x="925" y="42">Serveur web</text>
+  </g>
+
+  <!-- Poste client : 7 couches -->
+  <g>
+    <rect x="225" y="60" width="110" height="40" rx="6" fill="#7b3fa0"/>
+    <rect x="225" y="106" width="110" height="40" rx="6" fill="#5b4bc4"/>
+    <rect x="225" y="152" width="110" height="40" rx="6" fill="#2f6fbf"/>
+    <rect x="225" y="198" width="110" height="40" rx="6" fill="#1b7a63"/>
+    <rect x="225" y="244" width="110" height="40" rx="6" fill="#347a2f"/>
+    <rect x="225" y="290" width="110" height="40" rx="6" fill="#b8621b"/>
+    <rect x="225" y="336" width="110" height="40" rx="6" fill="#b33a3a"/>
+  </g>
+
+  <!-- Switch : couches 1 et 2 -->
+  <g fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6 5" opacity="0.6">
+    <rect x="440" y="60" width="110" height="40" rx="6"/>
+    <rect x="440" y="106" width="110" height="40" rx="6"/>
+    <rect x="440" y="152" width="110" height="40" rx="6"/>
+    <rect x="440" y="198" width="110" height="40" rx="6"/>
+    <rect x="440" y="244" width="110" height="40" rx="6"/>
+  </g>
+  <rect x="440" y="290" width="110" height="40" rx="6" fill="#b8621b"/>
+  <rect x="440" y="336" width="110" height="40" rx="6" fill="#b33a3a"/>
+
+  <!-- Routeur : couches 1 à 3 -->
+  <g fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6 5" opacity="0.6">
+    <rect x="655" y="60" width="110" height="40" rx="6"/>
+    <rect x="655" y="106" width="110" height="40" rx="6"/>
+    <rect x="655" y="152" width="110" height="40" rx="6"/>
+    <rect x="655" y="198" width="110" height="40" rx="6"/>
+  </g>
+  <rect x="655" y="244" width="110" height="40" rx="6" fill="#347a2f"/>
+  <rect x="655" y="290" width="110" height="40" rx="6" fill="#b8621b"/>
+  <rect x="655" y="336" width="110" height="40" rx="6" fill="#b33a3a"/>
+
+  <!-- Serveur : 7 couches -->
+  <g>
+    <rect x="870" y="60" width="110" height="40" rx="6" fill="#7b3fa0"/>
+    <rect x="870" y="106" width="110" height="40" rx="6" fill="#5b4bc4"/>
+    <rect x="870" y="152" width="110" height="40" rx="6" fill="#2f6fbf"/>
+    <rect x="870" y="198" width="110" height="40" rx="6" fill="#1b7a63"/>
+    <rect x="870" y="244" width="110" height="40" rx="6" fill="#347a2f"/>
+    <rect x="870" y="290" width="110" height="40" rx="6" fill="#b8621b"/>
+    <rect x="870" y="336" width="110" height="40" rx="6" fill="#b33a3a"/>
+  </g>
+
+  <!-- Le chemin de la donnée : liseré sombre puis tracé clair, lisible sur les deux fonds -->
+  <path d="M280 80 V356 H470 V310 H520 V356 H685 V264 H735 V356 H925 V92" fill="none" stroke="#121114" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M280 80 V356 H470 V310 H520 V356 H685 V264 H735 V356 H925 V92" fill="none" stroke="#ffd43b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="280" cy="80" r="8" fill="#ffd43b" stroke="#121114" stroke-width="2.5"/>
+  <polygon points="925,66 913,90 937,90" fill="#ffd43b" stroke="#121114" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Ce que fait chaque équipement -->
+  <g fill="#888" font-size="16" text-anchor="middle">
+    <text x="280" y="404" font-weight="700">7 couches</text>
+    <text x="280" y="428">encapsule</text>
+    <text x="495" y="404" font-weight="700">couches 1 et 2</text>
+    <text x="495" y="428">lit l'adresse MAC</text>
+    <text x="710" y="404" font-weight="700">couches 1 à 3</text>
+    <text x="710" y="428">lit l'IP, change les MAC</text>
+    <text x="925" y="404" font-weight="700">7 couches</text>
+    <text x="925" y="428">désencapsule</text>
+  </g>
+</svg>
