@@ -1,4 +1,4 @@
-[← Chapitre précédent](04-Le-modele-TCP-IP.md) · [Sommaire](Readme.md) · [Annexe : glossaire →](A-Glossaire.md)
+[← Chapitre précédent](04-Le-modele-TCP-IP.md) · [Sommaire](Readme.md) · [Chapitre suivant →](A-Glossaire.md)
 
 # Diagnostiquer et sécuriser couche par couche
 
@@ -212,4 +212,4 @@ déchiffrer le trafic TLS pour en voir le contenu.
 
 ---
 
-[← Chapitre précédent](04-Le-modele-TCP-IP.md) · [Sommaire](Readme.md) · [Annexe : glossaire →](A-Glossaire.md)
+[← Chapitre précédent](04-Le-modele-TCP-IP.md) · [Sommaire](Readme.md) · [Chapitre suivant →](A-Glossaire.md)

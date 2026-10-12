@@ -1,0 +1,14 @@
+course:
+  name: "Modèle OSI & TCP/IP"
+  RNCP:
+    - RNCP42463
+    - RNCP37680
+  RNCPBloc: []
+  timing: 0.5
+
+credits:
+  authors:
+    - name: Jean-François Vial
+      github: 
+        - JeffDiginamic
+        - j33f
